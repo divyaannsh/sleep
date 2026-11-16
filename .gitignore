@@ -1,0 +1,29 @@
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# Large raw and processed image datasets (7GB+)
+data/
+
+# Local database logs (Phase 2 feedback data)
+prediction_logs.json
+sleep_apnea_logs.json
+vitals_logs.json
+backend.log
+
+# Local artifacts (confusion matrices, temporary files)
+artifacts/
+face_profile_*.png
+
+# Node/React dependencies and builds
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Large model weights
+trueskin_efficientnet.pth

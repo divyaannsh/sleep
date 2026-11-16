@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sleep
+    runtime: python
+    rootDir: .
+    pythonVersion: "3.11.0"
+    buildCommand: pip install -r requirements.txt
+    startCommand: PYTHONPATH=src python src/main.py
+    envVars:
+      - key: PYTHONPATH
+        value: src
+      - key: PYTHON_VERSION
+        value: "3.11.0"

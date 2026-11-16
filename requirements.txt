@@ -1,0 +1,26 @@
+# Core Web & API Server
+fastapi>=0.95.0
+uvicorn>=0.22.0
+python-multipart>=0.0.6
+
+# Machine Learning & Computer Vision
+# CPU-only torch — saves ~200MB vs CUDA build; 2.2.2 is first version with cp312 wheels
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.2+cpu
+torchvision==0.17.2+cpu
+
+# Headless OpenCV — no Qt/GUI libs, saves ~100MB vs opencv-python
+opencv-python-headless>=4.7.0
+numpy>=1.24.0,<2.0.0
+mediapipe>=0.10.0
+pillow>=9.5.0
+scipy>=1.10.0        # rPPG signal processing (CHROM, FFT, bandpass)
+
+# --- Training / Local Development Only ---
+# (Uncomment below if retraining the model locally)
+# pandas>=2.0.0
+# scikit-learn>=1.2.0
+# matplotlib>=3.7.0
+# seaborn>=0.13.0
+# albumentations>=1.3.0
+# ultralytics>=8.0.0
